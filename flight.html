@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Told U It was Meh</title>
+  <link rel="shortcut icon" href="css/assets/favicon-32x32.png" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #87CEEB; /* Sky blue background */
+      font-family: Arial, sans-serif;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 50px;
+      height: 70px;
+      background: red;
+      border-radius: 50%;
+      animation: float 10s linear infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    .balloon:after {
+      content: '';
+      position: absolute;
+      top: 100%; /* Place the line at the bottom of the balloon */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 40px;
+      background: black; /* String of the balloon */
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) translateX(calc(-50vw + 100px));
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const phrase = "Happy Birthday".split(''); // Split phrase into individual characters
+
+    function createBalloon() {
+      const balloon = document.createElement('div');
+      balloon.className = 'balloon';
+      balloon.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+      balloon.style.backgroundColor = getRandomColor(); // Random color
+      balloon.style.animationDuration = (Math.random() * 5 + 5) + 's'; // Random speed
+
+      // Assign a random letter from the phrase
+      const randomIndex = Math.floor(Math.random() * phrase.length);
+      const letter = phrase.splice(randomIndex, 1)[0]; // Remove the letter to avoid repetition
+      balloon.textContent = letter || ''; // Add the letter or keep it empty if all letters are used
+
+      document.body.appendChild(balloon);
+
+      // Remove the balloon after it floats away
+      balloon.addEventListener('animationend', () => {
+        balloon.remove();
+        // Re-add the letter back to the pool if needed
+        if (letter) phrase.push(letter);
+      });
+    }
+
+    function getRandomColor() {
+      const colors = ['red', 'blue', 'yellow', 'green', 'pink', 'orange', 'purple'];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    // Create balloons at regular intervals
+    setInterval(createBalloon, 500);
+  </script>
+</body>
+</html>

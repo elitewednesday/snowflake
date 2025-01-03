@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wednesday">
+    <title>HAPPY BIRTHDAY</title>
+    <link rel="stylesheet" href="css/confetti.css">
+    <link rel="shortcut icon" href="css/assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- Image saving prevention -->
+    <div class="overlay"></div>
+    <div class="messagen">Saving images or videeos is not allowd!</div>
+    <!-- Fireworks container -->
+    <div id="fireworks"></div>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container d-flex">
+            <!-- Title on the Left -->
+            <a class="navbar-brand" href="#">Gift From Wednesday</a>
+
+            <!-- Happy Birthday text in the center -->
+            <div class="happy-birthday">Happy Birthday SNOWFLAKE!</div>
+
+            <!-- Navbar Toggler for mobile view (Hamburger) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Custom SVG Hamburger Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+
+            <!-- Links on the Right -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="hangman.html">HANGMAN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html">QUIZ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sudoku.html">SUDOKU</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="confetti-overlay" id="confetti-overlay"></div>
+        <button id="confettie">🎉 CURTAINS!</button>
+        <div class="birthday-message">
+            <p>Happy 17th Birthday, Snowflake! 🎉🎂🎈</p>
+            <p>This special day is all about celebrating YOU! It's the perfect time to reflect on all the amazing memories you've created so far. 🥳</p>
+            <p>By the way, this *incredible* birthday gift is from your loving husband... Don't worry, he still remembers what you like! 😉💖</p>
+        </div>
+        <div class="background-image-container"></div>
+        <div class="birthday-card-message">
+            <p>To my dearest Snowflake,</p>
+            <p>On this special day, I just want to take a moment to remind you of how incredibly wonderful and loved you are. 17 years of joy, laughter, and beautiful moments! Every year, you continue to grow into an even more amazing person, and I'm lucky enough to be here to celebrate this milestone with you.</p>
+            <p>Your kindness, your strength, your brilliance — these are just a few of the qualities that make you so incredibly special. You light up every room you enter, and you have a heart that touches everyone around you. I’m so proud of all that you’ve achieved and the beautiful person you’ve become.</p>
+            <p>As you step into this new chapter of your life, I want to wish you nothing but happiness, love, and success. May all your dreams come true and may your heart be filled with endless joy. You deserve all the wonderful things life has to offer, and I can't wait to see what the future holds for you!(i hope it doesn't involve Kdrama)</p>
+            <p>And of course, this gift is just a small token of my appreciation of you. May today be as extraordinary as you are, filled with laughter, cake, and everything that makes you smile(including lots of food). Happy Birthday, my Snowflake. I cherish you more than words can say.</p>
+            <p>With all my love,</p>
+            <p>Yours always(At least until you get tired of me or u get an actual boyfriend)</p>
+            <p>Your devoted husband 💖</p>
+            <p>Buh then on the real thanks for being a good friend.</p>
+        </div>
+        <!-- CAROUSEL, REMEMBER TO EDIT ALL IMAGES AND SHXT -->
+        <div class="col-12">
+            <p class="mem-text">
+                Memories Gallery
+            </p>
+        </div>        
+        <div class="carousel-container">
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <div class="carousel">
+                  <img src="css/assets/photo_2025-01-02_19-03-16.jpg" alt="img" draggable="false">
+                  <img src="css/assets/photo_2025-01-02_19-03-21.jpg" alt="img" draggable="false">
+                  <img src="css/assets/photo_2025-01-02_19-03-25.jpg" alt="img" draggable="false">
+                  <img src="css/assets/photo_2025-01-02_19-03-30.jpg" alt="img" draggable="false">
+                  <img src="css/assets/photo_2025-01-02_19-03-33.jpg" alt="img" draggable="false">
+                  <img src="css/assets/photo_2025-01-02_19-03-39.jpg" alt="img" draggable="false">
+                </div>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+        <div class="birthday-message">
+            <p>🎉 Welcome to this special birthday website! 🎉</p>
+            <p>Building this site was a fun journey that took quite a bit of time and lots of lines of code! 💻 Each page, every feature, and all the details were carefully put together with you in mind. It’s been a project of love, and I’ve learned so much along the way. 🚀</p>
+            <p>🎂 I hope you enjoy every little bit of it! 🎁 This website is more than just a gift, it’s a way to show how much I appreciate you. Your presence in my life is truly special, and I’m so grateful for every moment we’ve shared. 🥰</p>
+            <p>And to be completely honest, this was also a chance for me to grow and improve my skills. While I’ve come a long way, I still have a lot more to learn. But one thing I know for sure is that I gave it my all in making this site just for you. 🙌</p>
+            <p>So, take a moment to explore, enjoy the games, check out the images, and feel the love that went into creating this. 💖 I hope it brings a smile to your face and a warm feeling to your heart. 🎈</p>
+            <p>Happy Birthday once again! 🎉🎉 You deserve the best, and I can’t wait to see all the amazing things you will do! 🌟</p>
+            <p>If i want to send money to me, i appreciate it 🤑, since ur'e a dbee.</p>
+        </div>   
+        <div class="col-12">
+            <p class="mem-text">
+                Timeline
+            </p>
+        </div>     
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Event 1: Only God Knows What Year.</h3>
+                    <p>Well to be honest much can't be said about this, all i can say is, you were young.</p>
+                    <div class="timeline-media">
+                        <img src="css/assets/photo_2025-01-02_19-04-11.jpg" alt="Event 1" class="media-img"> <!-- Image or Video -->
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Event 2: 2024</h3>
+                    <p>Your first shenanegans. Something u call food, hmm.</p>
+                    <div class="timeline-media">
+                        <video class="media-video" controls>
+                            <source src="css/assets/WhatsApp Video 2025-01-02 at 6.45.01 PM.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Event 3: 2024</h3>
+                    <p>Something about Pewpew.</p>
+                    <div class="timeline-media">
+                        <video class="media-video" controls>
+                            <source src="css/assets/VID-20241208-WA0181.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>                    
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Event 4: 2024</h3>
+                    <p>No comments.</p>
+                    <div class="timeline-media">
+                        <video class="media-video" controls>
+                            <source src="css/assets/VID-20241109-WA0078.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>                    
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Event 5: 2024</h3>
+                    <p>Washawa Say.</p>
+                    <div class="timeline-media">
+                        <video class="media-video" controls>
+                            <source src="css/assets/VID-20241202-WA0072.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>                    
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Event 6: 2024</h3>
+                    <p>Well Baiden sent me this so.....</p>
+                    <div class="timeline-media">
+                        <img src="css/assets/WhatsApp Image 2025-01-03 at 16.41.07_b993cb26.jpg" alt="Event 1" class="media-img"> <!-- Image or Video -->
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="guestbook">
+            <h2>Messages from Loved Ones 💌</h2>
+            <div id="message-list" class="message-list">
+                <div class="message">
+                    <h4>ABOCHI</h4>
+                    <p>
+                        It's funny how I got the chance to know such a smart, messed up, naughty, funny asf, cute, short, brilliant, and talented girl like you. 🥰 O, I thank thee for bringing such a blissful sunshine into my life (and a big ass storm too 🌩️). I can't ask for more than that, love.
+
+                        I pray that Yahweh will grace you with His presence and restore anything you may have lost over the years. That He shall continue to bless you with a heart as pure as lost treasure 🪙 which was found by a dirty soul like mine. Jane, you'll always be one of my most cherished friends in this lifetime and shall forever be not just a well-wisher, nor a close pal, but an angel sent down from the Most High to shine down on my... nasty azz personality. 😈✨
+
+                        Have the most joyous birthday, dearie. 🎉🎂 And may your family and loved ones know no misfortune. This and many more I pray for... my dear Miroku-chan 🫂🥹. I'll never EVER stop worrying you, nor would I ever stop loving you. 🤧❤️🔥
+
+                        I thank you for always being there for me, even when I act all rude and shhhi 🫠💔. I shall forever reciprocate the kindness, brotherly love, and peace you've shown me. 🥹 Happy birthday, baby girl! 🐦🔥🔥🔥
+                    </p>
+                </div>
+                <div class="message">
+                    <h4>Raymond</h4>
+                    <p>Happy birthday  kiddo I'll always call you kiddo no matter how old you get literally one of the purest human souls I've met on this earth my personal therapist and an ear lent whenever required I pray for all the good things this life has to offer for you wishing you more happy and happier day's ahead love you so much happy birthday.</p>
+                </div>
+                <div class="message">
+                    <h4>Leaflet</h4>
+                    <p>May your birthday be a reflection of how amazing you aree, Happy Birthday, love🎈✨🎉❣.</p>
+                </div>
+                <div class="message">
+                    <h4>AJ</h4>
+                    <p>
+                        'To be honest, I don't really remember how we met or how we became friends. All I remember is that, I always had you to rely on(especially when I got stuck when I was writing my stories 😅).
+                        You've always been a great friend and I'll forever cherish the times that we spent together in school (even the times when we were ghosting each other for no good reason). The nights we'd spend talking in front of your dorm till midnight, gossiping about the people in the Home group😂😂👍 good times.
+                        Happy birthday Ngoziii. Even though you're still just a kid🥱. I hope you have a good one.
+                    </p>
+                </div>
+                <div class="message">
+                    <h4>Portia</h4>
+                    <p>
+                        Happy birthday to you Jane May the Good Lord protect you continue to keep you through out your whole journey on this earth 
+                        Lastly enjoy your beautiful day
+                    </p>
+                </div>
+                <div class="message">
+                    <h4>Klenam</h4>
+                    <p>
+                        So happy birthday Jane I really appreciate having had you in my life the past year we might've not been the closest but each interaction we've had has been nice,happy birthday again.
+                    </p>
+                </div>
+                <div class="message">
+                    <h4>Racheal</h4>
+                    <p>
+                        "Happy Birthday, Jane! 🎉💕. Your kindness, humor, and brilliance light up every room you enter. I’m so blessed to have you in my life. May your day be as amazing as you are, and your year be filled with endless joy, love, and success. Love you always! 🫂❤
+                    </p>
+                </div>
+                <div class="message">
+                    <h4>Vergil</h4>
+                    <p>
+                        Happy Birthday to ma sweet and caring Baby Mama. I hope you have a wonderful day and a great year ahead. You deserve it. Wishing you more wisdom and a healthy and prosperous life.
+                    </p>
+                </div>
+                <div class="message">
+                    <h4>Ember</h4>
+                    <p>
+                        Happy Birthday, Rei! 🫠
+                        You deserve the very best on this wonderful day because of how amazing you are! 😂 Keep being you, and cheers to another amazing year of laughter and happiness! 🎉
+                    </p>
+                </div>
+            </div>
+        </div>        
+        <div class="likes-section">
+            <h2>Things You Like ❤️</h2>
+            <div class="accordion" id="likesAccordion">
+                <!-- Games Section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingGames">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGames" aria-expanded="true" aria-controls="collapseGames">
+                            Games 🎮
+                        </button>
+                    </h2>
+                    <div id="collapseGames" class="accordion-collapse collapse show" aria-labelledby="headingGames" data-bs-parent="#likesAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>COD</li>
+                                <li>Minecraft</li>
+                                <li>Uno</li>
+                                <li>Sudoku <a href="sudoku.html">Play Here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Movies Section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingMovies">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMovies" aria-expanded="false" aria-controls="collapseMovies">
+                           Anime and Movies 🎬
+                        </button>
+                    </h2>
+                    <div id="collapseMovies" class="accordion-collapse collapse" aria-labelledby="headingMovies" data-bs-parent="#likesAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Saiki</li>
+                                <li>Silent Voice</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Songs Section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSongs">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSongs" aria-expanded="false" aria-controls="collapseSongs">
+                            Songs 🎶
+                        </button>
+                    </h2>
+                    <div id="collapseSongs" class="accordion-collapse collapse" aria-labelledby="headingSongs" data-bs-parent="#likesAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Hulvey</li>
+                                <li>Ariana Grande</li>
+                                <li>T pian</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="bucketlist-title">Bucket List(Do Before You Get Too Old)</h2>
+            <div class="accordion" id="bucketlistAccordion">
+            <!-- Accordion Item 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    1. Visit Korea and Live Your K-Drama Fantasy
+                </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Walk the streets of Seoul and bump into your "chaebol" crush.</li>
+                    <li>Write a poem about the encounter—it’s a K-drama moment!</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    2. Recreate an Iconic Anime Scene IRL
+                </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Run to the train station with toast in your mouth.</li>
+                    <li>Compose a haiku about your epic "toast sprint."</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                3. Sing Along to Ariana Grande's Songs
+                </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Master the high notes in "Dangerous Woman."</li>
+                    <li>Write a poem inspired by Ariana's voice.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    4. Have a T-Pain Karaoke Night
+                </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Try out auto-tune on your voice (don't worry, we all sound better with it).</li>
+                    <li>Record a freestyle rap in honor of T-Pain.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    5. Binge Watch an Entire K-Drama Series in One Weekend
+                </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Choose between "Crash Landing on You" and "Goblin."</li>
+                    <li>Write a review for the show, but keep it poetic.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 6 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    6. Attend a K-Pop Concert (with a fan lightstick!)
+                </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Fan chants? Check.</li>
+                    <li>Write a poem about your first concert experience.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 7 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    7. Explore New Cuisines (Just Don’t Ask to Cook)
+                </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Try sushi, dim sum, or kimchi—no need for cooking skills here!</li>
+                    <li>Write a poem about your favorite dish (let’s skip the cooking part, shall we?).</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 8 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    8. Create a K-Drama Inspired Outfit
+                </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Channel your inner K-Drama lead.</li>
+                    <li>Write a poem about your character's "unforgettable" fashion sense.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 9 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    9. Plan a K-Pop or Anime Themed Party
+                </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Pick your favorite K-Pop group or anime and go all out.</li>
+                    <li>Write a poem for the invitees, encouraging them to "join the fandom."</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 10 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                    10. Try an Ice Cream Eating Challenge (Because Why Not?)
+                </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Pick the most bizarre flavor you can find.</li>
+                    <li>Write a poem about the experience—was it "melting" under pressure?</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 11 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEleven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                    11. Write a Poem Inspired by Your Favorite K-Drama or Anime Character
+                </button>
+                </h2>
+                <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Express your love for the character through words and rhythm.</li>
+                    <li>Share it with friends and get their feedback.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 12 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwelve">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                    12. Attend a Poetry Slam (Or Start Your Own!)
+                </button>
+                </h2>
+                <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Find a local poetry event and share your best poem.</li>
+                    <li>If you can’t find one, create one! Invite your friends to join.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 13 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThirteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                    13. Go on a Foodie Tour of Your City
+                </button>
+                </h2>
+                <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Try out the best local food spots, from food trucks to high-end restaurants.</li>
+                    <li>Write a poem about your gastronomical adventure—if only you could cook!</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 14 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFourteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                    14. Make a Bucket List of Your Favorite K-Drama Couples
+                </button>
+                </h2>
+                <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Write down your top 5 K-Drama couples and why you ship them.</li>
+                    <li>Create your own "couple goals" playlist with songs from the shows.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Accordion Item 15 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFifteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                    15. Finally Cook a Meal Without "Help"
+                </button>
+                </h2>
+                <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#bucketlistAccordion">
+                <div class="accordion-body">
+                    <ul>
+                    <li>Start with something simple like rice.</li>
+                    <li>Write a "cooking chronicles" poem to document your progress.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <p class="note">"In the world of K-dramas, anime, and poetry, even the clumsiest, food-loving, can't-cook heroine finds her happy ending 💃💃. And she writes verses about it, too. How much more you.🏄🏾‍♂️"</p>
+        </div>
+        <div class="rating-container">
+            <p>
+                🌟 Please rate our website! 🌟
+            </p>
+            <p>
+                Wait, there is no our.
+            </p>
+            <p>
+                🌟 Please rate my website! 🌟
+            </p>
+            <div class="stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p class="rating-message">Your rating: <span id="user-rating">0</span> out of 5</p>
+        </div>        
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2024, My Bad, Sorry, 2025 Happy Birthday. All Rights Reserved.</p>
+                <P>CONSIDER CLICKING ON THE LINKS BELOW</P>
+                <div class="social-links">
+                <a href="flight.html" class="social-icon">BALOONS</a>
+                <a href="countup.html" class="social-icon">COUNT UP</a>
+                <a href="journal.html" class="social-icon">JOURNALS</a>
+                </div>
+            </div>
+        </div>
+    </footer>      
+    <script src="js/confetti.js"></script>
+    <script src="js/base.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,710 @@
+/* General body and html styles to prevent horizontal overflow */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    margin: 0; /* Ensure no default margins */
+    padding: 0; /* Ensure no default padding */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Fireworks container styles */
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: none;
+    pointer-events: none;
+}
+
+/* Style for each firework circle */
+.firework {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: explode 5s ease-out forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* Custom navbar styles */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px; /* Adjust the padding for more compact navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Title on the left */
+.navbar-brand {
+    font-family: "Playwrite GB J Guides", cursive;
+    font-weight: 400;
+    font-style: italic;
+    color: #fff !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto; /* Pull it to the left end */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Centered Happy Birthday text */
+.happy-birthday {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1; /* Take up available space */
+    word-wrap: break-word; /* Allows wrapping for smaller screens */
+    white-space: normal; /* Allow text to wrap */
+}
+
+/* Links on the right */
+.navbar-nav {
+    margin-left: auto; /* Push the links to the right */
+}
+
+.nav-link {
+    color: #fff !important;
+    margin-left: 20px; /* Add margin between links */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Ensure no margin on left or right for navbar */
+.container {
+    padding: 0;
+}
+
+/* Adjust navbar alignment */
+.navbar-nav.ml-auto {
+    margin-left: 10px; /* Close to the right edge */
+}
+
+/* Hamburger icon adjustment */
+.navbar-toggler {
+    border-color: #fff;
+    background-color: transparent;
+    position: absolute; /* Keep it positioned on the right side */
+    right: 10px; /* Move to the right */
+    top: 10px;
+}
+.navbar-toggler-icon {
+    background-color: #fff;
+    width: 25px;  /* Make the icon slightly larger */
+    height: 3px;
+    border-radius: 5px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    /* Center the Happy Birthday text for small screens */
+    .happy-birthday {
+        font-size: 2rem;
+    }
+
+    /* Make the navbar links display vertically on smaller screens */
+    .navbar-nav {
+        width: 100%;
+        display: none; /* Hide the links initially */
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center;
+        padding: 10px 0;
+        background-color: #333; /* Ensure background for the dropdown */
+    }
+
+    .navbar-nav.active {
+        display: flex; /* Show the links when the hamburger is clicked */
+    }
+
+    /* Make sure the links have proper spacing */
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    /* Move the hamburger button to the right corner */
+    .navbar-toggler {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Style the SVG icon within the navbar toggler */
+    .navbar-toggler-icon {
+        width: 30px; /* Adjust size of the icon */
+        height: 30px; /* Adjust size of the icon */
+        fill: #fff; /* Set color to white */
+    }
+
+
+    /* Reduce font size for small screens */
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Further reduce font size for very small screens */
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .happy-birthday {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+/* Style for the birthday message container */
+.birthday-message {
+    /* background-image: url('assets/1.webp');  path to the generated image */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;  /* Responsive width */
+    margin: 20px auto;
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;  /* Font size for larger screens */
+    line-height: 1.6;
+    color: #000000;  /* Black text to contrast with the background */
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  /* Add shadow for some depth */
+}
+
+/* Make sure the text wraps and resizes appropriately */
+.birthday-message p {
+    margin: 10px 0;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .birthday-message {
+        font-size: 1rem;  /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .birthday-message {
+        font-size: 0.9rem;  /* Smaller font for mobile screens */
+    }
+}
+
+/* Style for the birthday card message container */
+.birthday-card-message {
+    background-color: #fff7e6;  /* Soft background color for a card feel */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 80%;  /* Responsive width */
+    margin: 30px auto;
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;  /* Font size for readability */
+    line-height: 1.8;
+    color: #333;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);  /* Soft shadow for depth */
+}
+
+/* Ensure that the text is responsive and wraps nicely */
+.birthday-card-message p {
+    margin-bottom: 20px;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .birthday-card-message {
+        font-size: 1rem;  /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .birthday-card-message {
+        font-size: 0.9rem;  /* Slightly smaller font for mobile screens */
+    }
+}
+
+/* Style for the div with background image */
+.background-image-container {
+    width: 100%;  /* Full width of the container */
+    height: 400px;  /* Adjust height as necessary */
+    background-image: url('assets/1.webp');  /* Replace with your image path */
+    background-size: cover;  /* Make the background image cover the entire div */
+    background-position: center;  /* Center the image */
+    margin: 30px auto;  /* Add margin around the div */
+    border-radius: 15px;  /* Optional: Adds rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Optional: Adds shadow for depth */
+}
+
+/* Make sure the div is responsive and adjusts to screen size */
+@media (max-width: 768px) {
+    .background-image-container {
+        height: 300px;  /* Adjust the height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .background-image-container {
+        height: 250px;  /* Further reduce height on mobile devices */
+    }
+}
+
+.carousel-container{
+    display: flex;
+    padding: 0 35px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #343F4F;
+}
+.wrapper{
+    display: flex;
+    max-width: 1200px;
+    position: relative;
+}
+.wrapper i{
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #343F4F;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+.wrapper i:active{
+    transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover{
+    background: #f2f2f2;
+}
+.wrapper i:first-child{
+    left: -22px;
+    display: none;
+}
+.wrapper i:last-child{
+    right: -22px;
+}
+.wrapper .carousel{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel.dragging img{
+    pointer-events: none;
+}
+.carousel img{
+    height: 340px;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 14px;
+    width: calc(100% / 3);
+}
+.carousel img:first-child{
+    margin-left: 0px;
+}
+@media screen and (max-width: 900px) {
+    .carousel img{
+    width: calc(100% / 2);
+    }
+}
+@media screen and (max-width: 550px) {
+    .carousel img{
+    width: 100%;
+    }
+}
+
+.mem-text {
+    text-align: center; /* Centers the text horizontally */
+    font-weight: bold;  /* Makes the text bold */
+    font-size: calc(2rem + 2vw); /* Very large and responsive font size */
+    word-wrap: break-word; /* Ensures long text wraps */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2C3E50; /* Dark blue-gray background */
+    color: #ECF0F1; /* Light text color */
+    padding: 40px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ECF0F1;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    border-radius: 50%;
+    background-color: #34495E; /* Icon background color */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #E74C3C; /* Hover effect with red background */
+    transform: scale(1.1); /* Slightly increase icon size */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .footer-content p {
+    font-size: 1rem;
+    }
+
+    .social-icon {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    }
+}
+
+/* Rating Container */
+.rating-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.rating-container p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.stars {
+    font-size: 2rem;
+    color: #f1c40f; /* Gold color for stars */
+    cursor: pointer;
+}
+
+.stars .star {
+    margin: 0 5px;
+}
+
+.stars .star:hover,
+.stars .star.selected {
+    color: #e67e22; /* Hover effect or selected star color */
+}
+
+.rating-message {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 800px;
+    border-left: 3px solid #3498db; /* Line connecting the timeline items */
+}
+
+/* Timeline Items */
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+.timeline-item .timeline-icon {
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3498db;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Content inside each timeline item */
+.timeline-item .timeline-content {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.timeline-item .timeline-content h3 {
+    margin: 0 0 10px 0;
+    color: #3498db;
+    font-size: 1.2rem;
+}
+
+.timeline-item .timeline-content p {
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Media section (images or videos) */
+.timeline-media {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.media-video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+}
+
+/* Hover Effect */
+.timeline-item:hover .timeline-content {
+    background-color: #ecf0f1;
+}
+
+.timeline-item:hover .timeline-icon {
+    background-color: #e74c3c; /* Change icon color on hover */
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-item .timeline-content {
+        padding-left: 20px;
+    }
+
+    .media-img, .media-video {
+        width: 100%; /* Make media take full width on smaller screens */
+    }
+}
+
+.media-img.enlarged {
+    transform: scale(1.5); /* Enlarges the image */
+    transition: transform 0.3s ease;
+}
+
+
+/* Guestbook Section */
+.guestbook {
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.guestbook h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.message-list {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.message-list .message {
+    margin-bottom: 20px;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.message-list .message h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: #3498db;
+}
+
+.message-list .message p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .guestbook {
+        padding: 20px;
+    }
+
+    .message-form input, .message-form textarea, .message-form button {
+        font-size: 1rem;
+    }
+}
+
+/* Likes Section */
+.likes-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.likes-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+/* Style for accordion items */
+.accordion-button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3498db;
+    background-color: #ecf0f1;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #3498db;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.accordion-body {
+    padding: 10px;
+    font-size: 1.1rem;
+    background-color: #f1f1f1;
+}
+
+.accordion-body ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.accordion-body ul li {
+    margin: 5px 0;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .likes-section {
+        padding: 20px;
+    }
+
+    .accordion-button {
+        font-size: 1rem;
+    }
+
+    .accordion-body ul li {
+        font-size: 1rem;
+    }
+}
+
+
+.messagen {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+}
+.overlayn {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.bucketlist-title {
+    text-align: center;
+    margin: 30px 0;
+    color: #333;
+    font-weight: bold;
+}
+.accordion-item {
+    margin-bottom: 10px;
+}
+.note {
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
